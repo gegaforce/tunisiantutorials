@@ -1,0 +1,1 @@
+SELECT * FROM jeux_video LIMIT 0, 20

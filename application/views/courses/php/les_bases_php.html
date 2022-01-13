@@ -1,0 +1,208 @@
+<link rel="stylesheet" href="<?php echo css_url('time_line') ;?>"/>
+<script src="<?php echo js_url('jquery-3.2.0.min');?>"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			$('.stp').bind("mouseover", function(){
+				var color  = $(this).css("background-color");
+				
+				$(this).css("background-color", "#c7c7c7");
+				switch(this.id){
+					case "1": $('.timeline_StepName').text("إضافة فضاء خاص بكل مستخدم");break;
+					case "2": $('.timeline_StepName').text('الدخول الى الموقع');break;
+					case "3": $('.timeline_StepName').text('Fonctionnement');break;
+					case "4": $('.timeline_StepName').text('Preparer son environnememnt de travail');break;
+					case "5": $('.timeline_StepName').text('Ecrire son premier script');break;
+					case "6": $('.timeline_StepName').text('Configurer PHP pour visualiser les erreurs');break;
+					
+					case "7": $('.timeline_StepName').text('Les variables');break;
+					case "8": $('.timeline_StepName').text('Les boucles');break;
+					case "9": $('.timeline_StepName').text('Les tableaux');break;
+					case "10": $('.timeline_StepName').text('Les fonctions');break;
+					case "11": $('.timeline_StepName').text('أساسيات PHP');break;
+					case "12": $('.timeline_StepName').text('التاريخ في SQL');break;
+				}
+				$(this).bind("mouseout", function(){
+					$(this).css("background-color", color);
+					$('.timeline_StepName').text('');
+				});
+				$(this).bind("click", function(){
+				});
+				
+			});    
+		});
+
+</script>
+
+
+	<div class="time_line">
+		<center><span class="timeline_StepName" id='timeline_StepName'></span></center>
+	</div>
+	<div class="time_line_container">
+			<div id="step" dir="rtl">
+				<a href="<?php echo site_url('Course/accueil'); ?>"><img id="start" height="30" width="30" src="<?=img_url('home.png');?>"/></a>
+
+					<a class="stp" id="1" href="<?php echo site_url('Course/ajouter_un_espace_membre'); ?>"></a>
+					<a class="stp" id="2" href="<?php echo site_url('Course/fonctionnement_d_un_site_ecrit_en_php'); ?>"><div class="triangle" id="t2"></div></a>
+					<a class="stp" id="3" href="<?php echo site_url('Course/preparer_son_environnement_de_travail'); ?>"><div class="triangle"></div></a>
+					<a class="stp" id="4" href="<?php echo site_url('Course/ecrire_son_premier_script'); ?>"><div class="triangle"></div></a>
+					<a class="stp" id="5" href="<?php echo site_url('Course/Configurer_PHP_pour_visualiser_les_erreurs'); ?>"><div class="triangle"></div></a>
+					 
+					<a class="stp" id="7" style="margin-left:10px" href="<?php echo site_url('Course/les_variables'); ?>"><div class="triangle"></div></a>
+					<a class="stp" id="8" href="<?php echo site_url('Course/les_conditions'); ?>"></a>
+					<a class="stp" id="9" href="<?php echo site_url('Course/les_boucles'); ?>"></a>
+					<a class="stp" id="10" href="<?php echo site_url('Course/les_fonctions'); ?>"></a>
+					<a class="stp" id="11" href="<?php echo site_url('Course/les_bases_php'); ?>"><div class="triangle"  style="visibility:visible"></div></a>
+					<a class="stp" id="12" href="<?php echo site_url('Course/les_date_en_sql'); ?>"></a>
+
+				<img id="end" height="30" width="30" src="<?=img_url('reward.png');?>"/>
+			</div>
+
+	</div>
+	
+
+	<div class="tableOfContent">
+		<ul dir="rtl">
+			<li><a href="#">تصميم موقع الويب الخاص بك مع PHP و MySQL</a></li>
+			<li><a href="#">أساسيات PHP</a></li>
+			<li><a href="#">نقل البيانات صفحة إلى أخرى</a></li>
+			<li><a href="#">تخزين المعلومات في قاعدة بيانات</a></li>
+			<li><a href="#">  استخدام متقدم لـPHP</a></li>
+		</ul>
+	</div>
+	
+<article>
+<p>
+<br>القواعد الأساسية لـ PHP:<br>
+<br>المتغيرات les variables:<br>
+تتميز المتغيرات في PHP بـ "القيمة" و"الإسم"<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')">$nom_de_varible = valeur_de_variable<br>
+</div>
+
+مثال:<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')">$ages = "17 ans"<br>
+</div>
+
+ "$age " هو الإسم <br>
+و"17 ans " هي القيمة<br>
+نلاحظ هنا أن المتغير $age يسجل القيمة "17 ans" حيث يمكن  تغييرهاوالقيام بعمليات عليها وعندما نكون في حاجة إليها نناديها بإسمها <br>
+أنواع المتغيرات:<br>
+-سلسلة من الحروف chaine de caractères (String)<br>
+مثل "mon age est 24"<br>
+- الأرقام les nombres entiers(int)<br>
+مثل 234<br>
+- الأعداد العشرية les nombres decimaux(float)<br>
+مثل 13,56<br>
+- المنطقية boolean(true or false)<br>
+- الخانة الفارغة NULL<br>
+أحيانا نحتاج متغيرات لا تحتوي على قيمة.<br>
+تعيين قيمة لمتغير:<br>
+</?/php<br>
+$mon_age = 23 ;<br>
+?><br>
+اسم المتغير mon_age<br>
+قيمته: 23<br>
+ملاحظة:الرمز "دولار" ‘$’ يكون دائما قبل إسم المتغير.<br>
+الرمز يساوي "=" يعني قيمة المتغير. <br>
+";" يعني إنتهاء السطر البرمجي.<br>
+<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')"></?php<br>
+	$age = 17 ; //يتم إنشاء المتغير وقيمته 17<br>
+	$age = 23 ; //يتم تغير قيمة المتغير إلى 23<br>
+	$age = 42 ; //يتم تغيير قيمة المتغير إلى 42<br>
+?><br></div>
+
+
+إستخدام أنواع البيانات:<br>
+نوع String<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')"></?php<br>
+	$nom_visiteur = "Ahmed" ;<br>
+	$nom_visiteur = ‘Ahmed’ ;<br>
+?><br></div>
+
+
+ملاحظة: نلاحظ إختلاف المعقفات "و'<br>
+إذا أردنا إضافة ' إلى سلسلة الحروف.<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')"></?php<br>
+	$nom_visiteur = "Mon \"nom\" est Ahmed" ;<br>
+	$nom_visiteur = ‘Je m \'appelle Ahmed’ ;<br>
+?><br></div>
+
+
+او بإختصار:<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')">< ?php<br>
+	$nom_visiteur = "Mon ‘nom’ est Ahmed" ;<br>
+	$nom_visiteur = ‘Mon "nom" est Ahmed" ;<br>
+?><br></div>
+
+
+نوع int:<br>
+		<div class="code" id="code_form" onClick="selectText('code_form')">< ?php<br>
+	$age_de_visiteur = 17 ;<br>
+?><br></div>
+
+
+
+
+نوع عدد عشري (float):<br>
+</?php<br>
+$poids = 58.98 ;<br>
+/?/><br>
+نوع boolean:<br>
+</ ?php<br>
+	$je_suis_un_etudiant = true ;<br>
+	$je_suis_un_bon_eleve = false ;<br>
+?/><br>
+نوع الخانة الفارغةNULL:<br>
+< ?php<br>
+	$pas_de_valeur = NULL ;<br>
+?/><br>
+عرض وتسلسل المتغيرات: concat et affiche des variables<br>
+
+</ ?php <br>
+	$age = 17 ;<br>
+	echo $age ;// عرض المتغير 17<br>
+?/><br>
+< ?php<br>
+	$age = 17 ;<br>
+	echo " = le visiteur a " ;<br>
+	echo = $age ;<br>
+	echo = "ans" .;<br>
+?><br>
+الأخير يظهر لناالجملة التالية:<br>
+Le visiteur a 17 ans.<br>
+تسلسل الكلمات:<br>
+< ?php<br>
+	$age =17 ;<br>
+	echo "le visiteur a $age ans." ;<br>
+?><br>
+أو<br>
+< ?php<br>
+	$age =17 ;<br>
+	echo 'le visiteur a.' $age. 'ans.' ;<br>
+?><br>
+عمليات حسابية بسيطة<br>
+الجمع +<br>
+الطرح –<br>
+القسمة /<br>
+الضرب *<br>
+</?php<br>
+	$nbre = 4+5 ;//nbre = 9<br>
+	$nbre = 5-3 ;//nbre = 2<br>
+	$nbre = 6 / 2 ;//nbre = 3<br>
+	$nbre = 5 * 5 ;//nbre 25<br>
+
+	$nbre = 4 * 5 + 2;//nbre = 22<br>
+	$nbre = (1 + 3) * 4;//nbre = 12<br>
+	//<br>
+	$nbre = 10 ;<br>
+	$resultat = ($nbre+4) * $nbre ;// $resulat = 140<br>
+?><br>
+
+
+Le modulo:<br>
+< ?php<br>
+	$nbre = 10%5 ;//nbre = 0<br>
+	$nbre = 10% 3 ;//nbre = 1<br>
+?><br>
+</p>
+</article>

@@ -1,0 +1,2 @@
+<article>أغلبية صفحات الويب تكون مقسمة بهذه الطريقة:<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img class="image_editeur" width="534" height="576" src="  http://www.tunisiantutorial.byethost7.com/assets/images/rtrtrtrtrtrtrtrt.PNG"><br> <br><br>
+				  			</article>

@@ -1,0 +1,20 @@
+title jquery
+chapitre إكتشف jquery
+تقديم
+مكتبات JavaScript
+jquery
+تنزيل jquery
+إدماج jquery في صفحة ويب
+أول برنامج مع Jquery
+script jqeury
+كل مكتبات javascript
+المهمة الرئيسية لـjquery
+المحددات الأساسية
+بعض الطرق
+تتالي الطرق
+تحميل DOM
+المحدد CSS القديم
+المحددات الخاصة
+تدريب
+متغيرات تطبيقية
+chapitre التعامل مع المحتوى

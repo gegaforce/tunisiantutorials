@@ -1,0 +1,1 @@
+&lt;div&nbsp;<span class="attribute">class="test"</span>
